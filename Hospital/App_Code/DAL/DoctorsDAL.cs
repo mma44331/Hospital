@@ -16,14 +16,14 @@ namespace DAL
             if (Tmp.Id == -1)
             {
                 Sql = $"insert into T_Doctors(DId,DFname,DLname,DPhone,City,Domain,DSeniority)";
-                Sql += $"values(N'{Tmp.DId}',N'{Tmp.DFname}',N'{Tmp.DLname}',N'{Tmp.DPhone}',N'{Tmp.City}',N'{Tmp.Domain}',N'{Tmp.DSeniority}')";
+                Sql += $"values({Tmp.DId},N'{Tmp.DFname}',N'{Tmp.DLname}',N'{Tmp.DPhone}',N'{Tmp.City}',N'{Tmp.Domain}','{Tmp.DSeniority}')";
 
 
             }
             else
             {
                 Sql = "Update T_Doctors set ";
-                Sql += $" DId='{Tmp.DId}',";
+                Sql += $" DId={Tmp.DId},";
                 Sql += $" DFname='{Tmp.DFname}',";
                 Sql += $" DLname=N'{Tmp.DLname}',";
                 Sql += $" DPhone=N'{Tmp.DPhone}',";

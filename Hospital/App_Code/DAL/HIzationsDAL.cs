@@ -16,16 +16,16 @@ namespace DAL
             if (Tmp.HId == -1)
             {
                 Sql = $"insert into T_HIzations(Id,DReception,DId,TDescription,TSummary,DRelease)";
-                Sql += $"values(N'{Tmp.Id}',N'{Tmp.DReception}',N'{Tmp.DId}',N'{Tmp.TDescription}',N'{Tmp.TSummary}',N'{Tmp.DRelease}')";
+                Sql += $"values(N'{Tmp.Id}',N'{Tmp.DReception}',{Tmp.DId},N'{Tmp.TDescription}',N'{Tmp.TSummary}',N'{Tmp.DRelease}')";
 
 
             }
             else
             {
                 Sql = "Update T_HIzations set ";
-                Sql += $" Id={Tmp.Id},";
-                Sql += $" DReception='{Tmp.DReception}',";
-                Sql += $" DId=N{Tmp.DId},";
+                Sql += $" Id=N'{Tmp.Id}',";
+                Sql += $" DReception=N'{Tmp.DReception}',";
+                Sql += $" DId={Tmp.DId},";
                 Sql += $" TDescription=N'{Tmp.TDescription}',";
                 Sql += $" TSummary=N'{Tmp.TSummary}',";
                 Sql += $" DRelease=N'{Tmp.DRelease}',";
@@ -86,14 +86,13 @@ namespace DAL
             {
                 tmp = new HIzations()
                 {
-                    Id = (int)Dt.Rows[0]["Id"],
-                    DId = (int)Dt.Rows[0]["DId"],
-                    DFname = Dt.Rows[0]["DFname"] + "",
-                    DLname = Dt.Rows[0]["DLname"] + "",
-                    DPhone = Dt.Rows[0]["DPhone"] + "",
-                    City = Dt.Rows[0]["City"] + "",
-                    Domain = Dt.Rows[0]["Domain"] + "",
-                    DSeniority = DateTime.Parse(Dt.Rows[0]["DSeniority"] + ""),
+                    Id = Dt.Rows[0]["Id"]+"",
+                    DReception = DateTime.Parse(Dt.Rows[0]["DReception"]+""),
+                    DId =(int) Dt.Rows[0]["DId"],
+                    TDescription = Dt.Rows[0]["TDescription"] + "",
+                    TSummary = Dt.Rows[0]["TSummary"] + "",
+                    DRelease =DateTime.Parse(Dt.Rows[0]["DRelease"]+""),
+                  
                 };
             }
             Db.Close();
@@ -105,7 +104,7 @@ namespace DAL
         public static int DeleteByiD(int Id)
         {
             int RetVal = 0;
-            string Sql = $"delete from t_HIzations where Id={Id}";
+            string Sql = $"delete from t_HIzations where HId={Id}";
             DbContext Db = new DbContext();
             RetVal = Db.ExecuteNonQuery(Sql);
             Db.Close();

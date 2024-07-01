@@ -67,50 +67,170 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Login.aspx" />
-    <Content Include="new.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Back Admin\assets\avatars\face-1.jpg" />
+    <Content Include="Back Admin\assets\avatars\face-2.jpg" />
+    <Content Include="Back Admin\assets\avatars\face-3.jpg" />
+    <Content Include="Back Admin\assets\avatars\face-4.jpg" />
+    <Content Include="Back Admin\assets\avatars\face-5.jpg" />
+    <Content Include="Back Admin\assets\avatars\face-6.jpg" />
+    <Content Include="Back Admin\assets\avatars\face-7.jpg" />
+    <Content Include="Back Admin\assets\avatars\face-8.jpg" />
+    <Content Include="Back Admin\assets\images\logo.svg" />
+    <Content Include="Back Admin\assets\images\qrcode.svg" />
+    <Content Include="Back Admin\assets\products\p1.jpg" />
+    <Content Include="Back Admin\assets\products\p2.jpg" />
+    <Content Include="Back Admin\assets\products\p3.jpg" />
+    <Content Include="Back Admin\assets\products\p4.jpg" />
+    <Content Include="Back Admin\auth-confirm.html" />
+    <Content Include="Back Admin\auth-login-half.html" />
+    <Content Include="Back Admin\auth-login.html" />
+    <Content Include="Back Admin\auth-register.html" />
+    <Content Include="Back Admin\auth-resetpw.html" />
+    <Content Include="Back Admin\calendar.html" />
+    <Content Include="Back Admin\chart-apexcharts.html" />
+    <Content Include="Back Admin\chart-chartjs.html" />
+    <Content Include="Back Admin\chart-inline.html" />
+    <Content Include="Back Admin\contacts-grid.html" />
+    <Content Include="Back Admin\contacts-list.html" />
+    <Content Include="Back Admin\contacts-new.html" />
+    <Content Include="Back Admin\css\apexcharts.css" />
+    <Content Include="Back Admin\css\app-dark.css" />
+    <Content Include="Back Admin\css\app-light.css" />
+    <Content Include="Back Admin\css\app-rtl.css" />
+    <Content Include="Back Admin\css\bootstrap-datepicker.css" />
+    <Content Include="Back Admin\css\dataTables.bootstrap4.css" />
+    <Content Include="Back Admin\css\daterangepicker.css" />
+    <Content Include="Back Admin\css\dropzone.css" />
+    <Content Include="Back Admin\css\dropzone.min.css" />
+    <Content Include="Back Admin\css\feather.css" />
+    <Content Include="Back Admin\css\fullcalendar.css" />
+    <Content Include="Back Admin\css\jquery.steps.css" />
+    <Content Include="Back Admin\css\jquery.timepicker.css" />
+    <Content Include="Back Admin\css\perfect-scrollbar.css" />
+    <Content Include="Back Admin\css\quill.snow.css" />
+    <Content Include="Back Admin\css\select2-bootstrap4.css" />
+    <Content Include="Back Admin\css\select2.css" />
+    <Content Include="Back Admin\css\simplebar.css" />
+    <Content Include="Back Admin\css\uppy.min.css" />
+    <Content Include="Back Admin\dashboard-analytics.html" />
+    <Content Include="Back Admin\dashboard-saas.html" />
+    <Content Include="Back Admin\dashboard-sales.html" />
+    <Content Include="Back Admin\dashboard-system.html" />
+    <Content Include="Back Admin\datamaps.html" />
+    <Content Include="Back Admin\files-grid.html" />
+    <Content Include="Back Admin\files-list.html" />
+    <Content Include="Back Admin\fonts\feather.svg" />
+    <Content Include="Back Admin\form_advanced.html" />
+    <Content Include="Back Admin\form_elements.html" />
+    <Content Include="Back Admin\form_layouts.html" />
+    <Content Include="Back Admin\form_upload.html" />
+    <Content Include="Back Admin\form_validation.html" />
+    <Content Include="Back Admin\form_wizard.html" />
+    <Content Include="Back Admin\index-boxed.html" />
+    <Content Include="Back Admin\index-horizontal.html" />
+    <Content Include="Back Admin\index-vertical.html" />
+    <Content Include="Back Admin\index.html" />
+    <Content Include="Back Admin\js\apexcharts.custom.js" />
+    <Content Include="Back Admin\js\apexcharts.min.js" />
+    <Content Include="Back Admin\js\apps.js" />
+    <Content Include="Back Admin\js\bootstrap-datepicker.min.js" />
+    <Content Include="Back Admin\js\bootstrap.min.js" />
+    <Content Include="Back Admin\js\Chart.min.js" />
+    <Content Include="Back Admin\js\config.js" />
+    <Content Include="Back Admin\js\d3.min.js" />
+    <Content Include="Back Admin\js\datamaps-zoomto.js" />
+    <Content Include="Back Admin\js\datamaps.all.min.js" />
+    <Content Include="Back Admin\js\datamaps.custom.js" />
+    <Content Include="Back Admin\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Back Admin\js\daterangepicker.js" />
+    <Content Include="Back Admin\js\dropzone.min.js" />
+    <Content Include="Back Admin\js\fullcalendar.custom.js" />
+    <Content Include="Back Admin\js\fullcalendar.js" />
+    <Content Include="Back Admin\js\gauge.min.js" />
+    <Content Include="Back Admin\js\jquery.dataTables.min.js" />
+    <Content Include="Back Admin\js\jquery.mask.min.js" />
+    <Content Include="Back Admin\js\jquery.min.js" />
+    <Content Include="Back Admin\js\jquery.sparkline.min.js" />
+    <Content Include="Back Admin\js\jquery.steps.min.js" />
+    <Content Include="Back Admin\js\jquery.stickOnScroll.js" />
+    <Content Include="Back Admin\js\jquery.timepicker.js" />
+    <Content Include="Back Admin\js\jquery.validate.min.js" />
+    <Content Include="Back Admin\js\moment.min.js" />
+    <Content Include="Back Admin\js\perfect-scrollbar.min.js" />
+    <Content Include="Back Admin\js\popper.min.js" />
+    <Content Include="Back Admin\js\quill.min.js" />
+    <Content Include="Back Admin\js\select2.min.js" />
+    <Content Include="Back Admin\js\simplebar.min.js" />
+    <Content Include="Back Admin\js\tinycolor-min.js" />
+    <Content Include="Back Admin\js\topojson.min.js" />
+    <Content Include="Back Admin\js\uppy.min.js" />
+    <Content Include="Back Admin\new.aspx" />
+    <Content Include="Back Admin\Login.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\BLL\Departments.cs" />
     <Compile Include="App_Code\BLL\Doctors.cs" />
     <Compile Include="App_Code\BLL\HIzations.cs" />
-    <Compile Include="App_Code\BLL\Mdicines.cs" />
+    <Compile Include="App_Code\BLL\Medicines.cs" />
     <Compile Include="App_Code\BLL\ParkingLot.cs" />
     <Compile Include="App_Code\BLL\Patzient.cs" />
     <Compile Include="App_Code\DAL\DepartmentsDAL.cs" />
     <Compile Include="App_Code\DAL\DoctorsDAL.cs" />
     <Compile Include="App_Code\DAL\HIzationsDAL.cs" />
-    <Compile Include="App_Code\DAL\MdicinesDAL.cs" />
+    <Compile Include="App_Code\DAL\MedicinesDAL.cs" />
     <Compile Include="App_Code\DAL\ParkingLotDAL.cs" />
     <Compile Include="App_Code\DAL\PatzientDAL.cs" />
     <Compile Include="App_Code\DbContext.cs" />
-    <Compile Include="Back.Master.cs">
-      <DependentUpon>Back.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Back.Master.designer.cs">
-      <DependentUpon>Back.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="new.aspx.cs">
+    <Compile Include="Back Admin\new.aspx.cs">
       <DependentUpon>new.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="new.aspx.designer.cs">
+    <Compile Include="Back Admin\new.aspx.designer.cs">
       <DependentUpon>new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Back Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Back Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Back.Master" />
+    <Content Include="Back Admin\data\contacts.json" />
+    <Content Include="Back Admin\data\eu.topo.json" />
+    <Content Include="Back Admin\fonts\feather.eot" />
+    <Content Include="Back Admin\fonts\feather.ttf" />
+    <Content Include="Back Admin\fonts\feather.woff" />
     <None Include="packages.config" />
+    <Content Include="Back Admin\page-404.html" />
+    <Content Include="Back Admin\page-500.html" />
+    <Content Include="Back Admin\page-blank.html" />
+    <Content Include="Back Admin\page-invoice.html" />
+    <Content Include="Back Admin\page-orders.html" />
+    <Content Include="Back Admin\page-timeline.html" />
+    <Content Include="Back Admin\profile-notification.html" />
+    <Content Include="Back Admin\profile-security.html" />
+    <Content Include="Back Admin\profile-settings.html" />
+    <Content Include="Back Admin\profile.html" />
+    <Content Include="Back Admin\support-center.html" />
+    <Content Include="Back Admin\support-faqs.html" />
+    <Content Include="Back Admin\support-ticket-detail.html" />
+    <Content Include="Back Admin\support-tickets.html" />
+    <Content Include="Back Admin\table_advanced.html" />
+    <Content Include="Back Admin\table_basic.html" />
+    <Content Include="Back Admin\table_datatables.html" />
+    <Content Include="Back Admin\ui-buttons.html" />
+    <Content Include="Back Admin\ui-color.html" />
+    <Content Include="Back Admin\ui-icons.html" />
+    <Content Include="Back Admin\ui-modals.html" />
+    <Content Include="Back Admin\ui-notification.html" />
+    <Content Include="Back Admin\ui-progress.html" />
+    <Content Include="Back Admin\ui-tabs-accordion.html" />
+    <Content Include="Back Admin\ui-typograpy.html" />
+    <Content Include="Back Admin\widgets.html" />
+    <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -120,7 +240,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Back Admin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
