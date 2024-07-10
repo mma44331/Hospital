@@ -11,6 +11,7 @@ namespace BLL
         public int DId {  get; set; }
         public string DName { get; set; }
         public string DHead { get; set; }
+        public  int DHeadId { get; set; }
 
         public void Save()
         {

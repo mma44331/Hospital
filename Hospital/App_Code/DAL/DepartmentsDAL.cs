@@ -16,16 +16,17 @@ namespace DAL
             string Sql = "";
             if (Tmp.DId == -1)
             {
-                Sql = $"insert into T_Departments(DId,DName,DHead)";
-                Sql += $"values(N'{Tmp.DName}',N'{Tmp.DHead}')";
+                Sql = $"insert into T_Departments(DName,DHead,DHeadId)";
+                Sql += $"values(N'{Tmp.DName}',N'{Tmp.DHead}',{Tmp.DHeadId})";
 
 
             }
             else
             {
                 Sql = "Update T_Departments set ";
-                Sql += $" DName='{Tmp.DName}',";
+                Sql += $" DName=N'{Tmp.DName}',";
                 Sql += $" DHead=N'{Tmp.DHead}',";
+                Sql += $" DHeadId={Tmp.DHeadId}";
                 Sql += $" Where DId={Tmp.DId}";
             }
 
@@ -34,7 +35,7 @@ namespace DAL
 
             if (Tmp.DId == -1)
             {
-                Sql = $"select max(DId) from T_Departments where DName=N'{Tmp.DName}'";
+                Sql = $"select max(DId) from T_Departments Where DName=N'{Tmp.DName}'";
 
                 Tmp.DId = (int)Db.ExecuteScalar(Sql);
             }
@@ -58,6 +59,7 @@ namespace DAL
                     DId = (int)Dt.Rows[i]["DId"],
                     DName = Dt.Rows[i]["DName"] + "",
                     DHead = Dt.Rows[i]["DHead"] + "",
+                    DHeadId =(int) Dt.Rows[i]["DHeadId"],
                 });
             }
 
@@ -81,6 +83,7 @@ namespace DAL
                     DId = (int)Dt.Rows[0]["DId"],
                     DName = Dt.Rows[0]["DName"] + "",
                     DHead = Dt.Rows[0]["DHead"] + "",
+                    DHeadId = (int)Dt.Rows[0]["DHeadId"],
                 };
             }
             Db.Close();
@@ -94,7 +97,8 @@ namespace DAL
             int RetVal = 0;
             string Sql = $"delete from t_Departments where DId={Id}";
             DbContext Db = new DbContext();
-            RetVal = Db.ExecuteNonQuery(Sql);
+            //RetVal = 
+                Db.ExecuteNonQuery(Sql);
             Db.Close();
             return RetVal;
         }

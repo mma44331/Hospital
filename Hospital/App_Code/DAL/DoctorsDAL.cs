@@ -66,7 +66,7 @@ namespace DAL
                     DPhone = Dt.Rows[i]["DPhone"]+"",
                     City = Dt.Rows[i]["City"] + "",
                     Domain = Dt.Rows[i]["Domain"] + "",
-                    DSeniority =DateTime.Parse (Dt.Rows[i]["DSeniority"] + ""),
+                    DSeniority =DateTime.Parse(Dt.Rows[i]["DSeniority"]+""),
 
                 });
             }

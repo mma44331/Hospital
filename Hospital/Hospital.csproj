@@ -44,8 +44,43 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=111.3.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.111.3.0\lib\net48\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,107 +102,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Back Admin\assets\avatars\face-1.jpg" />
-    <Content Include="Back Admin\assets\avatars\face-2.jpg" />
-    <Content Include="Back Admin\assets\avatars\face-3.jpg" />
-    <Content Include="Back Admin\assets\avatars\face-4.jpg" />
-    <Content Include="Back Admin\assets\avatars\face-5.jpg" />
-    <Content Include="Back Admin\assets\avatars\face-6.jpg" />
-    <Content Include="Back Admin\assets\avatars\face-7.jpg" />
-    <Content Include="Back Admin\assets\avatars\face-8.jpg" />
-    <Content Include="Back Admin\assets\images\logo.svg" />
-    <Content Include="Back Admin\assets\images\qrcode.svg" />
-    <Content Include="Back Admin\assets\products\p1.jpg" />
-    <Content Include="Back Admin\assets\products\p2.jpg" />
-    <Content Include="Back Admin\assets\products\p3.jpg" />
-    <Content Include="Back Admin\assets\products\p4.jpg" />
-    <Content Include="Back Admin\auth-confirm.html" />
-    <Content Include="Back Admin\auth-login-half.html" />
-    <Content Include="Back Admin\auth-login.html" />
-    <Content Include="Back Admin\auth-register.html" />
-    <Content Include="Back Admin\auth-resetpw.html" />
-    <Content Include="Back Admin\calendar.html" />
-    <Content Include="Back Admin\chart-apexcharts.html" />
-    <Content Include="Back Admin\chart-chartjs.html" />
-    <Content Include="Back Admin\chart-inline.html" />
-    <Content Include="Back Admin\contacts-grid.html" />
-    <Content Include="Back Admin\contacts-list.html" />
-    <Content Include="Back Admin\contacts-new.html" />
-    <Content Include="Back Admin\css\apexcharts.css" />
-    <Content Include="Back Admin\css\app-dark.css" />
-    <Content Include="Back Admin\css\app-light.css" />
-    <Content Include="Back Admin\css\app-rtl.css" />
-    <Content Include="Back Admin\css\bootstrap-datepicker.css" />
-    <Content Include="Back Admin\css\dataTables.bootstrap4.css" />
-    <Content Include="Back Admin\css\daterangepicker.css" />
-    <Content Include="Back Admin\css\dropzone.css" />
-    <Content Include="Back Admin\css\dropzone.min.css" />
-    <Content Include="Back Admin\css\feather.css" />
-    <Content Include="Back Admin\css\fullcalendar.css" />
-    <Content Include="Back Admin\css\jquery.steps.css" />
-    <Content Include="Back Admin\css\jquery.timepicker.css" />
-    <Content Include="Back Admin\css\perfect-scrollbar.css" />
-    <Content Include="Back Admin\css\quill.snow.css" />
-    <Content Include="Back Admin\css\select2-bootstrap4.css" />
-    <Content Include="Back Admin\css\select2.css" />
-    <Content Include="Back Admin\css\simplebar.css" />
-    <Content Include="Back Admin\css\uppy.min.css" />
-    <Content Include="Back Admin\dashboard-analytics.html" />
-    <Content Include="Back Admin\dashboard-saas.html" />
-    <Content Include="Back Admin\dashboard-sales.html" />
-    <Content Include="Back Admin\dashboard-system.html" />
-    <Content Include="Back Admin\datamaps.html" />
-    <Content Include="Back Admin\files-grid.html" />
-    <Content Include="Back Admin\files-list.html" />
-    <Content Include="Back Admin\fonts\feather.svg" />
-    <Content Include="Back Admin\form_advanced.html" />
-    <Content Include="Back Admin\form_elements.html" />
-    <Content Include="Back Admin\form_layouts.html" />
-    <Content Include="Back Admin\form_upload.html" />
-    <Content Include="Back Admin\form_validation.html" />
-    <Content Include="Back Admin\form_wizard.html" />
-    <Content Include="Back Admin\index-boxed.html" />
-    <Content Include="Back Admin\index-horizontal.html" />
-    <Content Include="Back Admin\index-vertical.html" />
-    <Content Include="Back Admin\index.html" />
-    <Content Include="Back Admin\js\apexcharts.custom.js" />
-    <Content Include="Back Admin\js\apexcharts.min.js" />
-    <Content Include="Back Admin\js\apps.js" />
-    <Content Include="Back Admin\js\bootstrap-datepicker.min.js" />
-    <Content Include="Back Admin\js\bootstrap.min.js" />
-    <Content Include="Back Admin\js\Chart.min.js" />
-    <Content Include="Back Admin\js\config.js" />
-    <Content Include="Back Admin\js\d3.min.js" />
-    <Content Include="Back Admin\js\datamaps-zoomto.js" />
-    <Content Include="Back Admin\js\datamaps.all.min.js" />
-    <Content Include="Back Admin\js\datamaps.custom.js" />
-    <Content Include="Back Admin\js\dataTables.bootstrap4.min.js" />
-    <Content Include="Back Admin\js\daterangepicker.js" />
-    <Content Include="Back Admin\js\dropzone.min.js" />
-    <Content Include="Back Admin\js\fullcalendar.custom.js" />
-    <Content Include="Back Admin\js\fullcalendar.js" />
-    <Content Include="Back Admin\js\gauge.min.js" />
-    <Content Include="Back Admin\js\jquery.dataTables.min.js" />
-    <Content Include="Back Admin\js\jquery.mask.min.js" />
-    <Content Include="Back Admin\js\jquery.min.js" />
-    <Content Include="Back Admin\js\jquery.sparkline.min.js" />
-    <Content Include="Back Admin\js\jquery.steps.min.js" />
-    <Content Include="Back Admin\js\jquery.stickOnScroll.js" />
-    <Content Include="Back Admin\js\jquery.timepicker.js" />
-    <Content Include="Back Admin\js\jquery.validate.min.js" />
-    <Content Include="Back Admin\js\moment.min.js" />
-    <Content Include="Back Admin\js\perfect-scrollbar.min.js" />
-    <Content Include="Back Admin\js\popper.min.js" />
-    <Content Include="Back Admin\js\quill.min.js" />
-    <Content Include="Back Admin\js\select2.min.js" />
-    <Content Include="Back Admin\js\simplebar.min.js" />
-    <Content Include="Back Admin\js\tinycolor-min.js" />
-    <Content Include="Back Admin\js\topojson.min.js" />
-    <Content Include="Back Admin\js\uppy.min.js" />
-    <Content Include="Back Admin\new.aspx" />
-    <Content Include="Back Admin\Login.aspx" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App_Code\BLL\Departments.cs" />
     <Compile Include="App_Code\BLL\Doctors.cs" />
     <Compile Include="App_Code\BLL\HIzations.cs" />
@@ -181,55 +115,204 @@
     <Compile Include="App_Code\DAL\ParkingLotDAL.cs" />
     <Compile Include="App_Code\DAL\PatzientDAL.cs" />
     <Compile Include="App_Code\DbContext.cs" />
-    <Compile Include="Back Admin\new.aspx.cs">
-      <DependentUpon>new.aspx</DependentUpon>
+    <Compile Include="BackAdmin\DepartmentsAddEdit.aspx.cs">
+      <DependentUpon>DepartmentsAddEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Back Admin\new.aspx.designer.cs">
-      <DependentUpon>new.aspx</DependentUpon>
+    <Compile Include="BackAdmin\DepartmentsAddEdit.aspx.designer.cs">
+      <DependentUpon>DepartmentsAddEdit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Back Admin\Login.aspx.cs">
+    <Compile Include="BackAdmin\Back.Master.cs">
+      <DependentUpon>Back.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\Back.Master.designer.cs">
+      <DependentUpon>Back.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\DoctorsAddEdit.aspx.cs">
+      <DependentUpon>DoctorsAddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\DoctorsAddEdit.aspx.designer.cs">
+      <DependentUpon>DoctorsAddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\DoctorsList.aspx.cs">
+      <DependentUpon>DoctorsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\DoctorsList.aspx.designer.cs">
+      <DependentUpon>DoctorsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\ListDepartments.aspx.cs">
+      <DependentUpon>ListDepartments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\ListDepartments.aspx.designer.cs">
+      <DependentUpon>ListDepartments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Back Admin\Login.aspx.designer.cs">
+    <Compile Include="BackAdmin\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\new.aspx.cs">
+      <DependentUpon>new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\new.aspx.designer.cs">
+      <DependentUpon>new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Back Admin\data\contacts.json" />
-    <Content Include="Back Admin\data\eu.topo.json" />
-    <Content Include="Back Admin\fonts\feather.eot" />
-    <Content Include="Back Admin\fonts\feather.ttf" />
-    <Content Include="Back Admin\fonts\feather.woff" />
+    <Content Include="BackAdmin\css\custom.css" />
+    <Content Include="BackAdmin\DepartmentsAddEdit.aspx" />
+    <Content Include="BackAdmin\assets\avatars\face-1.jpg" />
+    <Content Include="BackAdmin\assets\avatars\face-2.jpg" />
+    <Content Include="BackAdmin\assets\avatars\face-3.jpg" />
+    <Content Include="BackAdmin\assets\avatars\face-4.jpg" />
+    <Content Include="BackAdmin\assets\avatars\face-5.jpg" />
+    <Content Include="BackAdmin\assets\avatars\face-6.jpg" />
+    <Content Include="BackAdmin\assets\avatars\face-7.jpg" />
+    <Content Include="BackAdmin\assets\avatars\face-8.jpg" />
+    <Content Include="BackAdmin\assets\images\logo.svg" />
+    <Content Include="BackAdmin\assets\images\qrcode.svg" />
+    <Content Include="BackAdmin\assets\products\p1.jpg" />
+    <Content Include="BackAdmin\assets\products\p2.jpg" />
+    <Content Include="BackAdmin\assets\products\p3.jpg" />
+    <Content Include="BackAdmin\assets\products\p4.jpg" />
+    <Content Include="BackAdmin\auth-confirm.html" />
+    <Content Include="BackAdmin\auth-login-half.html" />
+    <Content Include="BackAdmin\auth-login.html" />
+    <Content Include="BackAdmin\auth-register.html" />
+    <Content Include="BackAdmin\auth-resetpw.html" />
+    <Content Include="BackAdmin\Back.Master" />
+    <Content Include="BackAdmin\.DS_Store" />
+    <Content Include="BackAdmin\data\contacts.json" />
+    <Content Include="BackAdmin\data\eu.topo.json" />
+    <Content Include="BackAdmin\DoctorsAddEdit.aspx" />
+    <Content Include="BackAdmin\DoctorsList.aspx" />
+    <Content Include="BackAdmin\fonts\feather.eot" />
+    <Content Include="BackAdmin\fonts\feather.ttf" />
+    <Content Include="BackAdmin\fonts\feather.woff" />
     <None Include="packages.config" />
-    <Content Include="Back Admin\page-404.html" />
-    <Content Include="Back Admin\page-500.html" />
-    <Content Include="Back Admin\page-blank.html" />
-    <Content Include="Back Admin\page-invoice.html" />
-    <Content Include="Back Admin\page-orders.html" />
-    <Content Include="Back Admin\page-timeline.html" />
-    <Content Include="Back Admin\profile-notification.html" />
-    <Content Include="Back Admin\profile-security.html" />
-    <Content Include="Back Admin\profile-settings.html" />
-    <Content Include="Back Admin\profile.html" />
-    <Content Include="Back Admin\support-center.html" />
-    <Content Include="Back Admin\support-faqs.html" />
-    <Content Include="Back Admin\support-ticket-detail.html" />
-    <Content Include="Back Admin\support-tickets.html" />
-    <Content Include="Back Admin\table_advanced.html" />
-    <Content Include="Back Admin\table_basic.html" />
-    <Content Include="Back Admin\table_datatables.html" />
-    <Content Include="Back Admin\ui-buttons.html" />
-    <Content Include="Back Admin\ui-color.html" />
-    <Content Include="Back Admin\ui-icons.html" />
-    <Content Include="Back Admin\ui-modals.html" />
-    <Content Include="Back Admin\ui-notification.html" />
-    <Content Include="Back Admin\ui-progress.html" />
-    <Content Include="Back Admin\ui-tabs-accordion.html" />
-    <Content Include="Back Admin\ui-typograpy.html" />
-    <Content Include="Back Admin\widgets.html" />
+    <Content Include="BackAdmin\calendar.html" />
+    <Content Include="BackAdmin\chart-apexcharts.html" />
+    <Content Include="BackAdmin\chart-chartjs.html" />
+    <Content Include="BackAdmin\chart-inline.html" />
+    <Content Include="BackAdmin\contacts-grid.html" />
+    <Content Include="BackAdmin\contacts-list.html" />
+    <Content Include="BackAdmin\contacts-new.html" />
+    <Content Include="BackAdmin\css\apexcharts.css" />
+    <Content Include="BackAdmin\css\app-dark.css" />
+    <Content Include="BackAdmin\css\app-light.css" />
+    <Content Include="BackAdmin\css\app-rtl.css" />
+    <Content Include="BackAdmin\css\bootstrap-datepicker.css" />
+    <Content Include="BackAdmin\css\dataTables.bootstrap4.css" />
+    <Content Include="BackAdmin\css\daterangepicker.css" />
+    <Content Include="BackAdmin\css\dropzone.css" />
+    <Content Include="BackAdmin\css\dropzone.min.css" />
+    <Content Include="BackAdmin\css\feather.css" />
+    <Content Include="BackAdmin\css\fullcalendar.css" />
+    <Content Include="BackAdmin\css\jquery.steps.css" />
+    <Content Include="BackAdmin\css\jquery.timepicker.css" />
+    <Content Include="BackAdmin\css\perfect-scrollbar.css" />
+    <Content Include="BackAdmin\css\quill.snow.css" />
+    <Content Include="BackAdmin\css\select2-bootstrap4.css" />
+    <Content Include="BackAdmin\css\select2.css" />
+    <Content Include="BackAdmin\css\simplebar.css" />
+    <Content Include="BackAdmin\css\uppy.min.css" />
+    <Content Include="BackAdmin\dashboard-analytics.html" />
+    <Content Include="BackAdmin\dashboard-saas.html" />
+    <Content Include="BackAdmin\dashboard-sales.html" />
+    <Content Include="BackAdmin\dashboard-system.html" />
+    <Content Include="BackAdmin\datamaps.html" />
+    <Content Include="BackAdmin\files-grid.html" />
+    <Content Include="BackAdmin\files-list.html" />
+    <Content Include="BackAdmin\fonts\feather.svg" />
+    <Content Include="BackAdmin\form_advanced.html" />
+    <Content Include="BackAdmin\form_elements.html" />
+    <Content Include="BackAdmin\form_layouts.html" />
+    <Content Include="BackAdmin\form_upload.html" />
+    <Content Include="BackAdmin\form_validation.html" />
+    <Content Include="BackAdmin\form_wizard.html" />
+    <Content Include="BackAdmin\index-boxed.html" />
+    <Content Include="BackAdmin\index-horizontal.html" />
+    <Content Include="BackAdmin\index-vertical.html" />
+    <Content Include="BackAdmin\index.html" />
+    <Content Include="BackAdmin\js\apexcharts.custom.js" />
+    <Content Include="BackAdmin\js\apexcharts.min.js" />
+    <Content Include="BackAdmin\js\apps.js" />
+    <Content Include="BackAdmin\js\bootstrap-datepicker.min.js" />
+    <Content Include="BackAdmin\js\bootstrap.min.js" />
+    <Content Include="BackAdmin\js\Chart.min.js" />
+    <Content Include="BackAdmin\js\config.js" />
+    <Content Include="BackAdmin\js\d3.min.js" />
+    <Content Include="BackAdmin\js\datamaps-zoomto.js" />
+    <Content Include="BackAdmin\js\datamaps.all.min.js" />
+    <Content Include="BackAdmin\js\datamaps.custom.js" />
+    <Content Include="BackAdmin\js\dataTables.bootstrap4.min.js" />
+    <Content Include="BackAdmin\js\daterangepicker.js" />
+    <Content Include="BackAdmin\js\dropzone.min.js" />
+    <Content Include="BackAdmin\js\fullcalendar.custom.js" />
+    <Content Include="BackAdmin\js\fullcalendar.js" />
+    <Content Include="BackAdmin\js\gauge.min.js" />
+    <Content Include="BackAdmin\js\jquery.dataTables.min.js" />
+    <Content Include="BackAdmin\js\jquery.mask.min.js" />
+    <Content Include="BackAdmin\js\jquery.min.js" />
+    <Content Include="BackAdmin\js\jquery.sparkline.min.js" />
+    <Content Include="BackAdmin\js\jquery.steps.min.js" />
+    <Content Include="BackAdmin\js\jquery.stickOnScroll.js" />
+    <Content Include="BackAdmin\js\jquery.timepicker.js" />
+    <Content Include="BackAdmin\js\jquery.validate.min.js" />
+    <Content Include="BackAdmin\js\moment.min.js" />
+    <Content Include="BackAdmin\js\perfect-scrollbar.min.js" />
+    <Content Include="BackAdmin\js\popper.min.js" />
+    <Content Include="BackAdmin\js\quill.min.js" />
+    <Content Include="BackAdmin\js\select2.min.js" />
+    <Content Include="BackAdmin\js\simplebar.min.js" />
+    <Content Include="BackAdmin\js\tinycolor-min.js" />
+    <Content Include="BackAdmin\js\topojson.min.js" />
+    <Content Include="BackAdmin\js\uppy.min.js" />
+    <Content Include="BackAdmin\ListDepartments.aspx" />
+    <Content Include="BackAdmin\Login.aspx" />
+    <Content Include="BackAdmin\new.aspx" />
+    <Content Include="BackAdmin\page-404.html" />
+    <Content Include="BackAdmin\page-500.html" />
+    <Content Include="BackAdmin\page-blank.html" />
+    <Content Include="BackAdmin\page-invoice.html" />
+    <Content Include="BackAdmin\page-orders.html" />
+    <Content Include="BackAdmin\page-timeline.html" />
+    <Content Include="BackAdmin\profile-notification.html" />
+    <Content Include="BackAdmin\profile-security.html" />
+    <Content Include="BackAdmin\profile-settings.html" />
+    <Content Include="BackAdmin\profile.html" />
+    <Content Include="BackAdmin\support-center.html" />
+    <Content Include="BackAdmin\support-faqs.html" />
+    <Content Include="BackAdmin\support-ticket-detail.html" />
+    <Content Include="BackAdmin\support-tickets.html" />
+    <Content Include="BackAdmin\table_advanced.html" />
+    <Content Include="BackAdmin\table_basic.html" />
+    <Content Include="BackAdmin\table_datatables.html" />
+    <Content Include="BackAdmin\test.aspx" />
+    <Content Include="BackAdmin\ui-buttons.html" />
+    <Content Include="BackAdmin\ui-color.html" />
+    <Content Include="BackAdmin\ui-icons.html" />
+    <Content Include="BackAdmin\ui-modals.html" />
+    <Content Include="BackAdmin\ui-notification.html" />
+    <Content Include="BackAdmin\ui-progress.html" />
+    <Content Include="BackAdmin\ui-tabs-accordion.html" />
+    <Content Include="BackAdmin\ui-typograpy.html" />
+    <Content Include="BackAdmin\widgets.html" />
     <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

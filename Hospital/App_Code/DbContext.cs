@@ -43,7 +43,7 @@ namespace Data
 
             int RetVal = Cmd.ExecuteNonQuery();//הפונקציה משמשת לשאילתות שלא שולפת נתונים, כגון הוספה מחיקה ועידכון
             Cmd.Dispose();//שחרור הזכרון באופן יזום
-            return RetVal;//החזרת מספר הרשומות שהושפעו מהשאילתה
+           return RetVal;//החזרת מספר הרשומות שהושפעו מהשאילתה
         }
 
         public object ExecuteScalar(string Sql)
