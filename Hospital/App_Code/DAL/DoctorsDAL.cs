@@ -1,9 +1,12 @@
 ﻿using BLL;
 using Data;
+using DATE;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 
 namespace DAL
@@ -16,20 +19,20 @@ namespace DAL
             if (Tmp.Id == -1)
             {
                 Sql = $"insert into T_Doctors(DId,DFname,DLname,DPhone,City,Domain,DSeniority)";
-                Sql += $"values({Tmp.DId},N'{Tmp.DFname}',N'{Tmp.DLname}',N'{Tmp.DPhone}',N'{Tmp.City}',N'{Tmp.Domain}','{Tmp.DSeniority}')";
+                Sql += $"values(N'{Tmp.DId}',N'{Tmp.DFname}',N'{Tmp.DLname}',N'{Tmp.DPhone}',N'{Tmp.City}',{Tmp.Domain},'{Tmp.DSeniority}')";
 
 
             }
             else
             {
                 Sql = "Update T_Doctors set ";
-                Sql += $" DId={Tmp.DId},";
-                Sql += $" DFname='{Tmp.DFname}',";
+                Sql += $" DId=N'{Tmp.DId}',";
+                Sql += $" DFname=N'{Tmp.DFname}',";
                 Sql += $" DLname=N'{Tmp.DLname}',";
                 Sql += $" DPhone=N'{Tmp.DPhone}',";
                 Sql += $" City=N'{Tmp.City}',";
-                Sql += $" Domain=N'{Tmp.Domain}',";
-                Sql += $" DSeniority=N'{Tmp.DSeniority}',";
+                Sql += $" Domain={Tmp.Domain},";
+                Sql += $" DSeniority=N'{Tmp.DSeniority}' ";
                 Sql += $" Where Id={Tmp.Id}";
             }
 
@@ -43,6 +46,24 @@ namespace DAL
                 Tmp.Id = (int)Db.ExecuteScalar(Sql);
             }
             Db.Close();
+        }
+        public static int Save(Doctors Tmp,string ContexName)
+        {
+            BsonDocument doctors = new BsonDocument()
+            {
+                { "DId",Tmp.DId },
+                {"DFname",Tmp.DFname},
+                 {"DLname",Tmp.DLname},
+                 {"DPhone",Tmp.DPhone},
+                 {"City",Tmp.City},
+                 {"Domain",Tmp.Domain},
+                 {"DSeniority",Tmp.DSeniority }
+            };
+            MongoContext mongoContext = new MongoContext();
+            mongoContext.InsertOne("Doctors",doctors);
+            int RecCount = 1;
+            return RecCount;
+
         }
 
         public static List<Doctors> GetAll()
@@ -65,7 +86,7 @@ namespace DAL
                     DLname = Dt.Rows[i]["DLname"] + "",
                     DPhone = Dt.Rows[i]["DPhone"]+"",
                     City = Dt.Rows[i]["City"] + "",
-                    Domain = Dt.Rows[i]["Domain"] + "",
+                    Domain = int.Parse(Dt.Rows[i]["Domain"] + ""),
                     DSeniority =DateTime.Parse(Dt.Rows[i]["DSeniority"]+""),
 
                 });
@@ -94,7 +115,7 @@ namespace DAL
                     DLname = Dt.Rows[0]["DLname"] + "",
                     DPhone = Dt.Rows[0]["DPhone"] + "",
                     City = Dt.Rows[0]["City"] + "",
-                    Domain = Dt.Rows[0]["Domain"] + "",
+                    Domain = int.Parse(Dt.Rows[0]["Domain"] + ""),
                     DSeniority = DateTime.Parse(Dt.Rows[0]["DSeniority"] + ""),
                 };
             }

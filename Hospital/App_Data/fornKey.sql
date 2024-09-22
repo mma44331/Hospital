@@ -1,0 +1,1 @@
+﻿ALTER TABLE T_Doctors add constraint FkDomain foreign key (Domain) references t_departments(DId)

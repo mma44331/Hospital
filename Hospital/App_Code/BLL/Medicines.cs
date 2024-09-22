@@ -9,8 +9,9 @@ namespace BLL
     public class Medicines
     {
         public int MId { get; set; }
-        public string MName { get; set; }
+        public string Mname { get; set; }
         public float Price{ get; set; }
+        public string MBarCod {  get; set; }
         public void Save()
         {
             MedicinesDAL.Save(this);

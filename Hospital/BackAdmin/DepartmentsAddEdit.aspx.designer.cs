@@ -15,6 +15,15 @@ namespace Hospital.BackAdmin
     {
 
         /// <summary>
+        /// DHeadId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField DHeadId;
+
+        /// <summary>
         /// HidDid control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace Hospital.BackAdmin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DDLDHead;
+
+        /// <summary>
+        /// LtlMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LtlMsg;
 
         /// <summary>
         /// BtnDep control.

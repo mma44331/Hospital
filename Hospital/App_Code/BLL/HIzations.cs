@@ -9,6 +9,8 @@ namespace BLL
     public class HIzations
     {
         public int HId { get; set; }
+        public string FName { get; set; }
+        public string LName { get; set; }   
         public string Id { get; set; }
         public DateTime DReception { get; set; }
         public int DId { get; set; }

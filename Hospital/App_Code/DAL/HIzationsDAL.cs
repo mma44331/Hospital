@@ -15,8 +15,8 @@ namespace DAL
             string Sql = "";
             if (Tmp.HId == -1)
             {
-                Sql = $"insert into T_HIzations(Id,DReception,DId,TDescription,TSummary,DRelease)";
-                Sql += $"values(N'{Tmp.Id}',N'{Tmp.DReception}',{Tmp.DId},N'{Tmp.TDescription}',N'{Tmp.TSummary}',N'{Tmp.DRelease}')";
+                Sql = $"insert into T_HIzations(Id,FName,LName,DReception,DId,TDescription,TSummary,DRelease)";
+                Sql += $"values(N'{Tmp.Id}',N'{Tmp.FName}',N'{Tmp.LName}',N'{Tmp.DReception}',{Tmp.DId},N'{Tmp.TDescription}',N'{Tmp.TSummary}',N'{Tmp.DRelease}')";
 
 
             }
@@ -24,11 +24,13 @@ namespace DAL
             {
                 Sql = "Update T_HIzations set ";
                 Sql += $" Id=N'{Tmp.Id}',";
-                Sql += $" DReception=N'{Tmp.DReception}',";
+                Sql += $" FName=N'{Tmp.FName}',";
+                Sql += $" LName=N'{Tmp.LName}',";
+                Sql += $" DReception='{Tmp.DReception}',";
                 Sql += $" DId={Tmp.DId},";
                 Sql += $" TDescription=N'{Tmp.TDescription}',";
                 Sql += $" TSummary=N'{Tmp.TSummary}',";
-                Sql += $" DRelease=N'{Tmp.DRelease}',";
+                Sql += $" DRelease='{Tmp.DRelease}'";
                 Sql += $" Where HId={Tmp.HId}";
             }
 
@@ -60,18 +62,18 @@ namespace DAL
                 {
                     HId = (int)Dt.Rows[i]["HId"],
                     Id = Dt.Rows[i]["Id"]+"",
-                    DReception = DateTime.Parse (Dt.Rows[i]["DReception"] + ""),
+                    FName = Dt.Rows[i]["FName"] + "",
+                    LName = Dt.Rows[i]["LName"] + "",
+                    DReception = DateTime.Parse(Dt.Rows[i]["DReception"] + ""),
                     DId = (int)Dt.Rows[i]["DId"],
                     TDescription = Dt.Rows[i]["TDescription"] + "",
                     TSummary = Dt.Rows[i]["TSummary"] + "",
-                    DRelease = DateTime.Parse(Dt.Rows[i]["DRelease"] + ""),
+                    DRelease =( Dt.Rows[i]["DRelease"] + ""!="")? DateTime.Parse(Dt.Rows[i]["DRelease"] + "") : DateTime.Parse("1234/15/54"), 
 
                 });
             }
-
             Db.Close();
             return lstHIzations;
-
         }
         public static HIzations GetByiD(int Id)
         {
@@ -87,6 +89,8 @@ namespace DAL
                 tmp = new HIzations()
                 {
                     Id = Dt.Rows[0]["Id"]+"",
+                    FName = Dt.Rows[0]["FName"] + "",
+                    LName = Dt.Rows[0]["LName"] + "",
                     DReception = DateTime.Parse(Dt.Rows[0]["DReception"]+""),
                     DId =(int) Dt.Rows[0]["DId"],
                     TDescription = Dt.Rows[0]["TDescription"] + "",

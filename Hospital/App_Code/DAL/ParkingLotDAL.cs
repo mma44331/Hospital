@@ -25,7 +25,7 @@ namespace DAL
                 Sql = "Update T_ParkingLot set ";
                 Sql += $" CNumber=N'{Tmp.CNumber}',";
                 Sql += $" EntryTime='{Tmp.EntryTime}',";
-                Sql += $" ReleaseTime='{Tmp.ReleaseTime}',";
+                Sql += $" ReleaseTime='{Tmp.ReleaseTime}'";
                 Sql += $" Where CId={Tmp.CId}";
             }
 

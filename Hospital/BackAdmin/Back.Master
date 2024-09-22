@@ -33,7 +33,7 @@
      <form class="form-inline mr-auto searchform text-muted">
        <input class="form-control mr-sm-2 bg-transparent border-0 pl-4 text-muted" type="search" placeholder="כתוב לחיפוש..." aria-label="Search">
      </form>
-     <ul class="nav">
+<%--     <ul class="nav">
        <li class="nav-item">
          <a class="nav-link text-muted my-2" href="#" id="modeSwitcher" data-mode="light">
            <i class="fe fe-sun fe-16"></i>
@@ -62,7 +62,7 @@
            <a class="dropdown-item" href="#">Activities</a>
          </div>
        </li>
-     </ul>
+     </ul>--%>
    </nav>
    <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
      <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
@@ -71,14 +71,8 @@
      <nav class="vertnav navbar navbar-light">
        <!-- nav bar -->
        <div class="w-100 mb-4 d-flex">
-         <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
-           <svg version="1.1" id="logo" class="navbar-brand-img brand-sm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve">
-             <g>
-               <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
-               <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
-               <polygon class="st0" points="78,33 15,33 24,15 87,15 	" />
-             </g>
-           </svg>
+         <a class="navbar-brand mx-auto mt-2 flex-fill text-center">
+             <img src="/BackAdmin/images/לוגו אסותא.gif" width="220" height="70"/>
          </a>
        </div>
        <ul class="navbar-nav flex-fill w-100 mb-2">
@@ -98,7 +92,7 @@
                <a class="nav-link pl-3" href="./ListHizations.aspx"><span class="ml-1 item-text">אישפוזים</span></a>
              </li>
              <li class="nav-item">
-               <a class="nav-link pl-3" href="./ListPatzient.aspx"><span class="ml-1 item-text">פציאנטים</span></a>
+               <a class="nav-link pl-3" href="./PatientList.aspx"><span class="ml-1 item-text">פציאנטים</span></a>
              </li>
              <li class="nav-item">
                <a class="nav-link pl-3" href="./ListMedicines.aspx"><span class="ml-1 item-text">תרופות</span></a>
@@ -110,114 +104,97 @@
          </li>
        </ul>
        <p class="text-muted nav-heading mt-4 mb-1">
-         <span>Components</span>
+         <span>תפריט ראשי</span>
        </p>
        <ul class="navbar-nav flex-fill w-100 mb-2">
          <li class="nav-item dropdown">
-           <a href="#ui-elements" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+           <a href="#Departments" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
              <i class="fe fe-box fe-16"></i>
-             <span class="ml-3 item-text">UI elements</span>
+             <span class="ml-3 item-text">מחלקות</span>
            </a>
-           <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
+           <ul class="collapse list-unstyled pl-4 w-100" id="Departments">
              <li class="nav-item">
-               <a class="nav-link pl-3" href="./ui-color.html"><span class="ml-1 item-text">Colors</span>
+               <a class="nav-link pl-3" href="./ListDepartments.aspx"><span class="ml-1 item-text">רשימת מחלקות</span>
                </a>
-             </li>
+             </li> <%--לדף רשימת מחלקות--%>
              <li class="nav-item">
-               <a class="nav-link pl-3" href="./ui-typograpy.html"><span class="ml-1 item-text">Typograpy</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./ui-icons.html"><span class="ml-1 item-text">Icons</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./ui-buttons.html"><span class="ml-1 item-text">Buttons</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./ui-notification.html"><span class="ml-1 item-text">Notifications</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./ui-modals.html"><span class="ml-1 item-text">Modals</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./ui-tabs-accordion.html"><span class="ml-1 item-text">Tabs & Accordion</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./ui-progress.html"><span class="ml-1 item-text">Progress</span></a>
-             </li>
+               <a class="nav-link pl-3" href="./DepartmentsAddEdit.aspx"><span class="ml-1 item-text">הוסף מחלקה חדשה</span></a>
+             </li> <%--לדף הוספת מחלקה חדשה--%>
            </ul>
-         </li>
-         <li class="nav-item w-100">
-           <a class="nav-link" href="widgets.html">
-             <i class="fe fe-layers fe-16"></i>
-             <span class="ml-3 item-text">Widgets</span>
-             <span class="badge badge-pill badge-primary">New</span>
-           </a>
-         </li>
+         </li> <%-- מחלקות--%>
          <li class="nav-item dropdown">
-           <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+           <a href="#Doctors" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
              <i class="fe fe-credit-card fe-16"></i>
-             <span class="ml-3 item-text">Forms</span>
+             <span class="ml-3 item-text">רופאים</span>
            </a>
-           <ul class="collapse list-unstyled pl-4 w-100" id="forms">
+           <ul class="collapse list-unstyled pl-4 w-100" id="Doctors">
              <li class="nav-item">
-               <a class="nav-link pl-3" href="./form_elements.html"><span class="ml-1 item-text">Basic Elements</span></a>
-             </li>
+               <a class="nav-link pl-3" href="./DoctorsList.aspx"><span class="ml-1 item-text">רשימת רופאים</span></a>
+             </li> <%-- רשימת רופאים--%>
              <li class="nav-item">
-               <a class="nav-link pl-3" href="./form_advanced.html"><span class="ml-1 item-text">Advanced Elements</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./form_validation.html"><span class="ml-1 item-text">Validation</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./form_wizard.html"><span class="ml-1 item-text">Wizard</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./form_layouts.html"><span class="ml-1 item-text">Layouts</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./form_upload.html"><span class="ml-1 item-text">File upload</span></a>
-             </li>
+               <a class="nav-link pl-3" href="./DoctorsAddEdit.aspx"><span class="ml-1 item-text">הוספת רופא חדש/ה</span></a>
+             </li> <%-- הוספת רופא חדש--%>
            </ul>
-         </li>
+         </li> <%-- רופאים--%>
          <li class="nav-item dropdown">
-           <a href="#tables" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+           <a href="#HIzations" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
              <i class="fe fe-grid fe-16"></i>
-             <span class="ml-3 item-text">Tables</span>
+             <span class="ml-3 item-text">אישפוזים</span>
            </a>
-           <ul class="collapse list-unstyled pl-4 w-100" id="tables">
+           <ul class="collapse list-unstyled pl-4 w-100" id="HIzations">
              <li class="nav-item">
-               <a class="nav-link pl-3" href="./table_basic.html"><span class="ml-1 item-text">Basic Tables</span></a>
-             </li>
+               <a class="nav-link pl-3" href="./HIzationsList.aspx"><span class="ml-1 item-text">רשימת האישפוזים</span></a>
+             </li> <%-- רשימת אישפוזים--%>
              <li class="nav-item">
-               <a class="nav-link pl-3" href="./table_advanced.html"><span class="ml-1 item-text">Advanced Tables</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./table_datatables.html"><span class="ml-1 item-text">Data Tables</span></a>
-             </li>
+               <a class="nav-link pl-3" href="./HIzationsAddEdit.aspx"><span class="ml-1 item-text">אישפוז חדש</span></a>
+             </li> <%-- הוספת אישפוז חדש--%>
            </ul>
-         </li>
+         </li>  <%--אישפוזים--%>
          <li class="nav-item dropdown">
-           <a href="#charts" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+           <a href="#Patient" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
              <i class="fe fe-pie-chart fe-16"></i>
-             <span class="ml-3 item-text">Charts</span>
+             <span class="ml-3 item-text">פציאנטים</span>
            </a>
-           <ul class="collapse list-unstyled pl-4 w-100" id="charts">
+           <ul class="collapse list-unstyled pl-4 w-100" id="Patient">
              <li class="nav-item">
-               <a class="nav-link pl-3" href="./chart-inline.html"><span class="ml-1 item-text">Inline Chart</span></a>
-             </li>
+               <a class="nav-link pl-3" href="./PatientList.aspx"><span class="ml-1 item-text">רשימת פציאנטים</span></a>
+             </li><%--  רשימת פציאנטים--%>
              <li class="nav-item">
-               <a class="nav-link pl-3" href="./chart-chartjs.html"><span class="ml-1 item-text">Chartjs</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./chart-apexcharts.html"><span class="ml-1 item-text">ApexCharts</span></a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link pl-3" href="./datamaps.html"><span class="ml-1 item-text">Datamaps</span></a>
-             </li>
+               <a class="nav-link pl-3" href="./PatientDetails.aspx"><span class="ml-1 item-text">הוספת פציאנט חדש</span></a>
+             </li> <%-- הוסף פציאנט חדש--%>
            </ul>
-         </li>
-       </ul>
-       <p class="text-muted nav-heading mt-4 mb-1">
+         </li>  <%--פציאנטים--%>
+         <li class="nav-item dropdown">
+           <a href="#Medicines" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+             <i class="fe fe-pie-chart fe-16"></i>
+             <span class="ml-3 item-text">תרופות</span>
+           </a>
+           <ul class="collapse list-unstyled pl-4 w-100" id="Medicines">
+             <li class="nav-item">
+               <a class="nav-link pl-3" href="./MedicinesList.aspx"><span class="ml-1 item-text">רשימת תרופות</span></a>
+             </li><%--  רשימת תרופות--%>
+             <li class="nav-item">
+               <a class="nav-link pl-3" href="./MedicinesAddEdit.aspx"><span class="ml-1 item-text">הוספת תרופה חדש</span></a>
+             </li> <%-- הוסף תרופה חדש--%>
+           </ul>
+         </li>  <%--תרופות --%>
+         <li class="nav-item dropdown">
+           <a href="#ParkingLot" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+             <i class="fe fe-pie-chart fe-16"></i>
+             <span class="ml-3 item-text">חניה</span>
+           </a>
+           <ul class="collapse list-unstyled pl-4 w-100" id="ParkingLot">
+             <li class="nav-item">
+               <a class="nav-link pl-3" href="./PatientList.aspx"><span class="ml-1 item-text">חניה</span></a>
+             </li><%--  רשימת פציאנטים--%>
+             <li class="nav-item">
+               <a class="nav-link pl-3" href="./PatientDetails.aspx"><span class="ml-1 item-text">חניה</span></a>
+             </li> <%-- הוסף פציאנט חדש--%>
+           </ul>
+         </li>  <%--חניה--%>
+
+    </ul>
+      <%-- <p class="text-muted nav-heading mt-4 mb-1">
          <span>Apps</span>
        </p>
        <ul class="navbar-nav flex-fill w-100 mb-2">
@@ -346,7 +323,7 @@
            </ul>
          </li>
        </ul>
-       <p class="text-muted nav-heading mt-4 mb-1">
+   <p class="text-muted nav-heading mt-4 mb-1">
          <span>Documentation</span>
        </p>
        <ul class="navbar-nav flex-fill w-100 mb-2">
@@ -361,7 +338,7 @@
          <a href="https://themeforest.net/item/tinydash-bootstrap-html-admin-dashboard-template/27511269" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
            <i class="fe fe-shopping-cart fe-12 mr-2"></i><span class="small">Buy now</span>
          </a>
-       </div>
+       </div>--%>
      </nav>
    </aside>
    <main role="main" class="main-content">

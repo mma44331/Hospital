@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.DynamicData;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -36,15 +37,13 @@ namespace Hospital.BackAdmin
             }
             HidDid.Value = DId;
             DDLDHead.DataSource = Doctors.GetAll();//מקור הנתונים
-            DDLDHead.DataTextField = "DFname";
             DDLDHead.DataTextField = "DLname";
-            DDLDHead.DataValueField = "Id";       
+            DDLDHead.DataValueField = "DLname";       
             DDLDHead.DataBind();
             DDLDHead.Items.Insert(0, "בחר ראש מחלקה");
-
+            
             if (Tmp!=null)
             {
-
                 TxtDepName.Text = Tmp.DName;
                 DDLDHead.Text= Tmp.DHead;
                 DDLDHead.SelectedValue = Tmp.DHeadId+"";
@@ -54,16 +53,32 @@ namespace Hospital.BackAdmin
 
         protected void BtnDep_Click(object sender, EventArgs e)
         {
+            string Msg = "";
+            bool flage=true;
+            List<Departments>lst=Departments.GetAll();
             Departments Tmp=new Departments()
             {
                 DId=int.Parse(HidDid.Value),
                 DName=TxtDepName.Text,
                 DHead=DDLDHead.Text,
             };
-            Tmp.Save();
-            Response.Redirect("ListDepartments.aspx");
+            for(int i = 0; i < lst.Count; i++)
+            {
+                if (Tmp.DHead == lst[i].DHead)
+                {
+                    flage = false;
+                    Msg = "הרופא הנוכחי כבר מוגדר למחלקה אחרת<br/>";
+                    Msg += "אנא בחר רופא אחר";
 
-
+                    LtlMsg.Text = Msg;
+                    break;
+                }
+            }//עובר על רשימת המחלקות ובודק אם כבר קיים ראש מחלקה עם אותו שם של המחלקה החדשה
+            if (flage == true)
+            {
+                Tmp.Save();
+                Response.Redirect("ListDepartments.aspx");
+            }//במידה והוא לא מצא שיש כבר ראש מלחקה כזה אז שישמור את החדש
         }
 
         protected void BtnDepDel_Click(object sender, EventArgs e)
@@ -75,6 +90,7 @@ namespace Hospital.BackAdmin
                 DHead = DDLDHead.Text,
             };
             Departments.DeleteByiD(Tmp.DId);
+            Response.Redirect("ListDepartments.aspx");
         }
     }
 }

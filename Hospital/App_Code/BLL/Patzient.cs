@@ -16,6 +16,9 @@ namespace BLL
         public string PCity { get; set; }
         public float PAge { get; set; }
         public string Phone { get; set; }
+        public int DId {  get; set; }
+        public int PGender{ get; set; }
+        public int Platoon { get; set; }
         public string PCarNumber { get; set; }
 
         public void Save()

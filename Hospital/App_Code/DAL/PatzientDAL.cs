@@ -20,8 +20,8 @@ namespace DAL
             string Sql = "";
             if (Tmp.PCId == -1)
             {
-                Sql = $"insert into T_Patzient(PId,PFname,PLname,PAddress,PCity,PAge,Phone,PCarNumber)";
-                Sql += $"values(N'{Tmp.PId}',N'{Tmp.PFname}',{Tmp.PLname},N'{Tmp.PAddress}',N'{Tmp.PCity}','{Tmp.PAge}',N'{Tmp.Phone}',N'{Tmp.PCarNumber}')";
+                Sql = $"insert into T_Patzient(PId,PFname,PLname,PAddress,PCity,PAge,Phone,PGender,Platoon,DId,PCarNumber)";
+                Sql += $"values(N'{Tmp.PId}',N'{Tmp.PFname}',{Tmp.PLname},N'{Tmp.PAddress}',N'{Tmp.PCity}','{Tmp.PAge}',N'{Tmp.Phone}',N'{Tmp.PGender}',{Tmp.Platoon},{Tmp.DId},N'{Tmp.PCarNumber}')";
 
 
             }
@@ -30,12 +30,15 @@ namespace DAL
                 Sql = "Update T_Patzient set ";
                 Sql += $" PId=N'{Tmp.PId}',";
                 Sql += $" PFname=N'{Tmp.PFname}',";
-                Sql += $" PLname={Tmp.PLname},";
+                Sql += $" PLname=N'{Tmp.PLname}',";
                 Sql += $" PAddress=N'{Tmp.PAddress}',";
                 Sql += $" PCity=N'{Tmp.PCity}',";
                 Sql += $" PAge='{Tmp.PAge}',";
                 Sql += $" Phone=N'{Tmp.Phone}',";
-                Sql += $" PCarNumber=N'{Tmp.PCarNumber}',";
+                Sql += $" PGender=N'{Tmp.PGender}',";
+                Sql += $" Platoon={Tmp.Platoon},";
+                Sql += $" DId={Tmp.DId},";
+                Sql += $" PCarNumber=N'{Tmp.PCarNumber}'";
                 Sql += $" Where PCId={Tmp.PCId}";
             }
 
@@ -73,6 +76,9 @@ namespace DAL
                     PCity = Dt.Rows[i]["PCity"] + "",
                     PAge = float.Parse(Dt.Rows[i]["PAge"] + ""),
                     Phone = Dt.Rows[i]["Phone"] + "",
+                    PGender = int.Parse(Dt.Rows[i]["PGender"]+""),
+                    Platoon= int.Parse(Dt.Rows[i]["Platoon"] +""),
+                    DId = int.Parse(Dt.Rows[i]["DId"] + ""),
                     PCarNumber = Dt.Rows[i]["PCarNumber"] + ""
                 });
             }
@@ -100,6 +106,9 @@ namespace DAL
                 PCity = Dt.Rows[0]["PCity"] + "",
                 PAge = float.Parse(Dt.Rows[0]["PAge"] + ""),
                 Phone = Dt.Rows[0]["Phone"] + "",
+                PGender = int.Parse(Dt.Rows[0]["PGender"] + ""),
+                Platoon = int.Parse(Dt.Rows[0]["Platoon"] + ""),
+                DId = int.Parse(Dt.Rows[0]["DId"] + ""),
                 PCarNumber = Dt.Rows[0]["PCarNumber"] + ""
 
             };

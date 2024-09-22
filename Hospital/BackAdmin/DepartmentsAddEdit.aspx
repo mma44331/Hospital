@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BackAdmin/Back.Master" AutoEventWireup="true" CodeBehind="DepartmentsAddEdit.aspx.cs" Inherits="Hospital.BackAdmin.AddNewDepartments" %>
+﻿
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/BackAdmin/Back.Master" AutoEventWireup="true" CodeBehind="DepartmentsAddEdit.aspx.cs" Inherits="Hospital.BackAdmin.AddNewDepartments" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>פרטי מחלקה</title>
 </asp:Content>
@@ -9,6 +11,7 @@
                   </div>
                   <div class="col-12 align-content-lg-center">
                     <form>
+                        <asp:HiddenField ID="DHeadId" runat="server" />
                         <asp:HiddenField ID="HidDid" runat="server" Value="-1"/>
                       <div class="form-group row">
                         <label for="inputDepartments" class="col-sm-3 col-form-label">שם מחלקה</label>
@@ -22,6 +25,11 @@
                           <asp:DropDownList id="DDLDHead" runat="server" class="form-control"   placeholder="ראש מחלקה"/>
                         </div>
                       </div>
+                        <div class="row">
+                          <div class="col-md-10 col-sm-10" style="text-align: center;">
+                            <asp:Label Id="LtlMsg" Runat="server" Style="color: #FF0000" />
+                         </div>
+                         </div>
                       <div class="form-group mb-2">
                         <asp:Button ID="BtnDep" runat="server" class="btn btn-primary" Text="שמור מחלקה" OnClick="BtnDep_Click"/>
                       </div>

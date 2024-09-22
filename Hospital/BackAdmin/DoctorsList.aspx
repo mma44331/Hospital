@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BackAdmin/Back.Master" AutoEventWireup="true" CodeBehind="DoctorsList.aspx.cs" Inherits="Hospital.BackAdmin.DoctorsList" %>
+﻿
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/BackAdmin/Back.Master" AutoEventWireup="true" CodeBehind="DoctorsList.aspx.cs" Inherits="Hospital.BackAdmin.DoctorsList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <title>רשימת רופאים</title>
@@ -8,10 +10,6 @@
        <div class="row align-items-center my-4">
     <div class="col">
       <h2 class="h3 mb-0 page-title">רופאים</h2>
-    </div>
-    <div class="col-auto">
-      <button type="button" class="btn btn-secondary"><span class="fe fe-trash fe-12 mr-2"></span>Delete</button>
-      <button type="button" class="btn btn-primary"><span class="fe fe-filter fe-12 mr-2"></span>Create</button>
     </div>
   </div>
   <div class="row">
@@ -27,7 +25,7 @@
        </div>
        <div class="card-text my-2">
          <strong class="card-title my-0">דר' <%#Eval("DLname")%></strong>
-         <p class="small text-muted mb-0"><%#Eval("Domain")%></p>
+         <p class="small text-muted mb-0">מחלקת: <%#Eval("Domain")%></p>
          <p class="small"><span class="badge badge-light text-muted"><%#Eval("City")%></span></p>
        </div>
      </div> <!-- ./card-text -->
@@ -44,7 +42,7 @@
              </button>
              <div class="dropdown-menu m-2"> 
                <a class="dropdown-item" href="DoctorsAddEdit.aspx?Id=<%#Eval("Id") %>"><i class="fe fe-meh fe-12 mr-4"></i>פרטי רופא</a>
-               <a class="dropdown-item" href="/PatzientList.aspx<%#Eval("Id")%>"><i class="fe fe-message-circle fe-12 mr-4"></i>רשימת פציאנטים</a>
+               <a class="dropdown-item" href="MyPatient.aspx?DDId=<%#Eval("Id")%>"><i class="fe fe-message-circle fe-12 mr-4"></i>רשימת פציאנטים</a>
                <a class="dropdown-item" href="#"><i class="fe fe-delete fe-12 mr-4"></i>מחיקת רופא</a>
              </div>
            </div>
@@ -196,7 +194,16 @@
    
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="FooterCnt" runat="server">
-      
+       <!-- DataTables JavaScript -->
+ <%--<script src="js/jquery/jquery.dataTables.min.js"></script>
+ <script src="js/bootstrap/dataTables.bootstrap.min.js"></script>--%>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        $(document).ready(function() {
+            $('#TblProduct').dataTable();
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="UnderFooterCnt" runat="server">
 </asp:Content>

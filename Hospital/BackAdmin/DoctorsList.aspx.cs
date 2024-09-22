@@ -20,7 +20,19 @@ namespace Hospital.BackAdmin
         }
         public void FillData()
         {
-            RptD.DataSource = Doctors.GetAll();
+            var Lst=Doctors.GetAll();
+            var Lstt = Departments.GetAll();
+            List<object> list = Lst.Select(x => new
+            {
+                Id = x.Id,
+                DId = x.DId,
+                DFname = x.DFname,
+                DLname = x.DLname,
+                DPhone = x.DPhone,
+                City = x.City,
+                Domain = Lstt.Where(l => l.DId == x.Domain).ToList()[0].DName,
+            }).ToList<object>();
+            RptD.DataSource = list;
             RptD.DataBind();
         }
     }

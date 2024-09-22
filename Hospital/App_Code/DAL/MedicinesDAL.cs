@@ -15,16 +15,17 @@ namespace DAL
             string Sql = "";
             if (Tmp.MId == -1)
             {
-                Sql = $"insert into T_Medicines(MName,Price)";
-                Sql += $"values(N'{Tmp.MName}','{Tmp.Price}')";
+                Sql = $"insert into T_Medicines(Mname,Price,MBarCod)";
+                Sql += $"values(N'{Tmp.Mname}','{Tmp.Price}',N'{Tmp.MBarCod}')";
 
 
             }
             else
             {
                 Sql = "Update T_Medicines set ";
-                Sql += $" MName= N'{Tmp.MName}',";
+                Sql += $" Mname= N'{Tmp.Mname}',";
                 Sql += $" Price='{Tmp.Price}',";
+                Sql += $" MBarCod= N'{Tmp.MBarCod}'";
                 Sql += $" Where MId={Tmp.MId}";
             }
 
@@ -33,7 +34,7 @@ namespace DAL
 
             if (Tmp.MId == -1)
             {
-                Sql = $"select max(MId) from T_Medicines where MName='{Tmp.MName}'";
+                Sql = $"select max(MId) from T_Medicines where Mname='N{Tmp.Mname}'";
 
                 Tmp.MId = (int)Db.ExecuteScalar(Sql);
             }
@@ -55,9 +56,9 @@ namespace DAL
                 lstMedicines.Add(new Medicines()
                 {
                     MId = (int)Dt.Rows[i]["MId"],
-                    MName = Dt.Rows[i]["MName"] + "",
+                    Mname = Dt.Rows[i]["Mname"] + "",
                     Price = float.Parse(Dt.Rows[i]["Price"] + ""),
-                   
+                    MBarCod = Dt.Rows[i]["MBarCod"] + ""
                 });
             }
 
@@ -69,7 +70,7 @@ namespace DAL
         {
             Medicines tmp = null;
 
-            string Sql = $"select * from t_Medicines where MId={Id}";
+            string Sql = $"select * from T_Medicines where MId={Id}";
 
             DbContext Db = new DbContext();
             DataTable Dt = Db.Execute(Sql);
@@ -79,8 +80,9 @@ namespace DAL
                 tmp = new Medicines()
                 {
                     MId = int.Parse(Dt.Rows[0]["MId"] + ""),
-                    MName = (Dt.Rows[0]["MName"] + ""),
-                    Price = float.Parse(Dt.Rows[0]["Price"]+""),                  
+                    Mname = Dt.Rows[0]["Mname"] + "",
+                    Price = float.Parse(Dt.Rows[0]["Price"] + ""),
+                    MBarCod = Dt.Rows[0]["MBarCod"] + "",
                 };
             }
             Db.Close();
@@ -92,7 +94,7 @@ namespace DAL
         public static int DeleteByiD(int Id)
         {
             int RetVal = 0;
-            string Sql = $"delete from t_Medicines where MId={Id}";
+            string Sql = $"delete from T_Medicines where MId={Id}";
             DbContext Db = new DbContext();
             RetVal = Db.ExecuteNonQuery(Sql);
             Db.Close();

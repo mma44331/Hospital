@@ -14,13 +14,18 @@ namespace BLL
         public string DLname { get; set; }
         public string DPhone { get; set; }
         public string City { get; set; }
-        public string Domain { get; set; }
+        public int Domain { get; set; }
         public DateTime DSeniority { get; set; }
 
         public void Save()
         {
             DoctorsDAL.Save(this);
         }
+        public void Save(string ContextName)
+        {
+            DoctorsDAL.Save(this, ContextName);
+        }
+
         public static List<Doctors> GetAll()
         {
             return DoctorsDAL.GetAll();

@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BackAdmin/Back.Master" AutoEventWireup="true" CodeBehind="ListDepartments.aspx.cs" Inherits="Hospital.BackAdmin.ListDepartments" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/BackAdmin/Back.Master" AutoEventWireup="true" CodeBehind="ListDepartments.aspx.cs" Inherits="Hospital.BackAdmin.ListDepartments" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>רשימת מחלקות</title>
 </asp:Content>
